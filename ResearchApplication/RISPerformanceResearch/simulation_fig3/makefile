@@ -1,0 +1,1 @@
+g++ -std=gnu++20 -fopenmp -O3 -I../library/boost_1_83_0 -I.. -g \main_fig3.cpp -o main_fig3
