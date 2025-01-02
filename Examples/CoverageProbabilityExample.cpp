@@ -20,14 +20,17 @@ int main(){
     auto start{std::chrono::steady_clock::now()};
 
     // Computing the coverage probability in three steps:
+    
     // 1, Define the laplace transform of interference from a point
     auto laplace_transform_at_r = [&](std::complex<double> s, double r){
         double interference_power = PathLoss::direct_nlos(r); 
         std::complex<double> return_value = Exponential::eval(s, interference_power);
         return return_value;
     };
+
     // 2, Define the laplace transform of interference from a point process
     PoissonPP2D_Reduced laplace_transform_interference(laplace_transform_at_r, BS_density, distance_typical_BS);
+
     // 3, Obtaining the coverage probability 
     double coverage_probability = CoverageProbability::calculate_rayleigh(distance_typical_BS, coverage_threshold, laplace_transform_interference, noise_power);
 

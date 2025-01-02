@@ -16,10 +16,10 @@ int main(){
     // Scenario Setup:
     double noise_power = 1e-13; // Watt 
     double BS_density = 1e-5; //per m^2
-    double distance_typical_BS = 70.0; // meter
+    double distance_typical_BS = 100.0; // meter
     double coverage_threshold = 1.0;
     
-    double RIS_elements = 100.0;
+    double RIS_elements = 200.0;
     double radius_min=10.0;
     double radius_max=25.0;
     auto cluster_cube = CUBE::make_cube_2D<double> (radius_min, radius_max, 0.0, 2.0 * M_PI);
