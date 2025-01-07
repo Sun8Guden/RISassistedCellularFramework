@@ -3,8 +3,8 @@
 #include "LT_interference.hpp"
 #include "LT_signal_chi.hpp"
 #include "LT_signal_gamma.hpp"
-#include "library/GenzMalik/Cube.hpp"
-#include "StochasticGeometryArchiv/Param.hpp"
+#include "../../../Integration/GenzMalik/GM2D.hpp"
+#include "../StochasticGeometryHelper/Param.hpp"
 
 class LT_upsilon_derivative_RIS {
 

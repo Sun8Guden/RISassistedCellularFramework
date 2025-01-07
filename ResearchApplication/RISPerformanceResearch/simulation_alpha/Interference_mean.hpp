@@ -3,8 +3,8 @@
 #include <cmath>
 #include <complex>
 #include "../LaplaceTransformPointProcess/PoissonPP.hpp"
-#include "../LaplaceTransformInstance/Interference.hpp"
-#include "../StochasticGeometry/Param.hpp"
+#include "../LaplaceTransformFunctions/Interference.hpp"
+#include "../StochasticGeometryHelper/Param.hpp"
 
 
 

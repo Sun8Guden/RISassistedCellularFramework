@@ -4,7 +4,7 @@
 #include "../LaplaceTransformDistribution/Exponential.hpp"
 #include "../LaplaceTransformDistribution/ChiSquare.hpp"
 #include "../LaplaceTransformPointProcess/PoissonPP.hpp"
-#include "../StochasticGeometry/Param.hpp"
+#include "../StochasticGeometryHelper/Param.hpp"
 #include "LT_utils.hpp"
 #include "ReflectedSignal.hpp"
 

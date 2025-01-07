@@ -3,10 +3,9 @@
 #include <iostream>
 #include <cmath>
 #include <array>
-#include "../library/cuhre/Integration.hpp"
-#include "../library/cuhre/Region.hpp"
-#include "./StochasticGeometry/Param.hpp"
-
+#include "../../../Integration/Cuhre/Integration.hpp"
+#include "../../../Integration/Cuhre/Region.hpp"
+#include "../StochasticGeometryHelper/Param.hpp"
 
 template <typename LT>
 double ergodic_rate_fix_distance_coverage_hole(LT lt_interference_signal, std::complex<double> s_parameter, double distance_arg, double x_UE, double y_UE)

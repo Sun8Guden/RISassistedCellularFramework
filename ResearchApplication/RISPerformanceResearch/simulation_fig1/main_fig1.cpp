@@ -4,17 +4,16 @@
 #include <vector>
 #include <complex>
 #include <fstream>
-#include "../StochasticGeometry/Param.hpp"
-#include "../StochasticGeometry/SeparatePositive.hpp"
-#include "../StochasticGeometry/ErgodicRate.hpp"
-#include "../LaplaceTransformInstance/Interference.hpp"
-#include "../LaplaceTransformInstance/Noise.hpp"
-#include "../LaplaceTransformInstance/ReflectedSignal.hpp"
+#include "../StochasticGeometryHelper/Param.hpp"
+#include "../StochasticGeometryHelper/SeparatePositive.hpp"
+#include "../StochasticGeometryHelper/ErgodicRate.hpp"
+#include "../LaplaceTransformFunctions/Interference.hpp"
+#include "../LaplaceTransformFunctions/Noise.hpp"
+#include "../LaplaceTransformFunctions/ReflectedSignal.hpp"
 #include "../LaplaceTransformPointProcess/PoissonPP.hpp"
-#include "../library/GenzMalik/Cube.hpp"
-#include "../library/GenzMalik/GM2D.hpp"
-
-#include "../library/json.hpp"
+#include "../../../Integration/GenzMalik/Cube.hpp"
+#include "../../../Integration/GenzMalik/GM2D.hpp"
+#include "../../../Utils/json.hpp"
 using json = nlohmann::json;
 
 int main(){
@@ -34,7 +33,7 @@ int main(){
     auto start = std::chrono::steady_clock::now();
     double normative_noise_power {1e-13};
 
-    // Define Laplace transform process for the three type RIS clusters.
+    // Define Laplace transform of the point processes for the three types of RIS clusters.
     PoissonPP signalPP(den_RIS, cluster_cube);
 
     

@@ -1,11 +1,11 @@
 #pragma once
 #include <cmath>
 #include <complex>
-#include "../library/GenzMalik/Cube.hpp"
-#include "../library/GenzMalik/GM2D.hpp"
+#include "../../../Integration/GenzMalik/Cube.hpp"
+#include "../../../Integration/GenzMalik/GM2D.hpp"
 #include "../LaplaceTransformDistribution/ChiSquare.hpp"
-#include "../StochasticGeometry/Param.hpp"
-#include "../LaplaceTransformInstance/LT_utils.hpp"
+#include "../StochasticGeometryHelper/Param.hpp"
+#include "../LaplaceTransformFunctions/LT_utils.hpp"
 
 
 

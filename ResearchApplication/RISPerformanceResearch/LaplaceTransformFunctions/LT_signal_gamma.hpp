@@ -2,9 +2,9 @@
 
 #include <complex>
 #include "LaplaceTransform.hpp"
-#include "library/GenzMalik/Cube.hpp"
-#include "library/GenzMalik/GM2D.hpp"
-#include "StochasticGeometryArchiv/Param.hpp"
+#include "../../../Integration/GenzMalik/Cube.hpp"
+#include "../../../Integration/GenzMalik/GM2D.hpp"
+#include "../StochasticGeometryHelper/Param.hpp"
 
 
 class LT_signal_gamma : public LaplaceTransform {

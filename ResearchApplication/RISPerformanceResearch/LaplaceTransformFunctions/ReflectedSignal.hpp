@@ -4,7 +4,7 @@
 #include "../LaplaceTransformPointProcess/PoissonPP.hpp"
 #include "../LaplaceTransformPointProcess/BinomialPP.hpp"
 #include "../LaplaceTransformDistribution/ChiSquare.hpp"
-#include "../StochasticGeometry/Param.hpp"
+#include "../StochasticGeometryHelper/Param.hpp"
 #include "LT_utils.hpp"
 
 

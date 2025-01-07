@@ -3,16 +3,15 @@
 #include <chrono>
 #include <complex>
 #include "ReflectedSignalSquare.hpp"
-#include "../StochasticGeometry/Param.hpp"
-#include "../StochasticGeometry/SeparatePositive.hpp"
-#include "../StochasticGeometry/ErgodicRate.hpp"
-#include "../LaplaceTransformInstance/Interference.hpp"
-#include "../LaplaceTransformInstance/Noise.hpp"
+#include "../StochasticGeometryHelper/Param.hpp"
+#include "../StochasticGeometryHelper/SeparatePositive.hpp"
+#include "../StochasticGeometryHelper/ErgodicRate.hpp"
+#include "../LaplaceTransformFunctions/Interference.hpp"
+#include "../LaplaceTransformFunctions/Noise.hpp"
 #include "../LaplaceTransformPointProcess/PoissonPP.hpp"
-#include "../library/GenzMalik/Cube.hpp"
-#include "../library/GenzMalik/GM2D.hpp"
-
-#include "../library/json.hpp"
+#include "../../../Integration/GenzMalik/Cube.hpp"
+#include "../../../Integration/GenzMalik/GM2D.hpp"
+#include "../../../Utils/json.hpp"
 using json = nlohmann::json;
 
 int main(){

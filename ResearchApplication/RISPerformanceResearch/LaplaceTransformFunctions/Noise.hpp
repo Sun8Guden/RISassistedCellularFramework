@@ -1,7 +1,7 @@
 #pragma once
 #include <complex>
 #include <cmath>
-#include "../StochasticGeometry/Param.hpp"
+#include "../StochasticGeometryHelper/Param.hpp"
 #include "LT_utils.hpp"
 
 template <typename S_type>

@@ -2,10 +2,10 @@
 #include <cmath>
 #include <iostream>
 #include <complex>
-#include "boost/math/quadrature/gauss_kronrod.hpp"
+#include "../../../Integration/boost/math/quadrature/gauss_kronrod.hpp"
 #include "LaplaceTransform.hpp"
 #include "LT_utils.hpp"
-#include "StochasticGeometryArchiv/Param.hpp"
+#include "../StochasticGeometryHelper/Param.hpp"
 
 class LT_interference : public LaplaceTransform {
 
