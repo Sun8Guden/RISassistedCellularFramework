@@ -13,7 +13,6 @@ template <typename S_type>
 S_type LaplaceReflectedInterference(S_type s, double cur_BS_distance, double distance, double threshold, const Param& param, PoissonPP& PPP){
 
     auto f_reflected_signal = [&](double y, double theta){
-        // For signal, s is negative. (probability I will add an assertion here.)
 
         double PL_coef = param.Antenna_gain * PL_r1(y) * PL_dN(cur_BS_distance, y, theta) / PL_d(distance) * threshold;
         double non_central_mean = PL_coef * (param.RISnumber / param.UEs_cell) * (param.RISnumber / param.UEs_cell) * param.zeta_mean * param.zeta_mean;
@@ -32,7 +31,6 @@ template <typename S_type>
 S_type LaplaceReflectedInterference_D1_no_exp(S_type s, double cur_BS_distance, double distance, double threshold, const Param& param, PoissonPP& PPP){
 
     auto f_reflected_signal = [&](double y, double theta){
-        // For signal, s is negative. (probability I will add an assertion here.)
 
         double PL_coef = param.Antenna_gain * PL_r1(y) * PL_dN(cur_BS_distance, y, theta) / PL_d(distance) * threshold;
         double non_central_mean = PL_coef * (param.RISnumber / param.UEs_cell) * (param.RISnumber / param.UEs_cell) * param.zeta_mean * param.zeta_mean;
