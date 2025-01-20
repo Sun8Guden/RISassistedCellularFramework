@@ -16,7 +16,7 @@ int main(){
     // Scenario Setup:
     double noise_power = 1e-13; // Watt 
     double BS_density = 1e-5; //per m^2
-    double distance_typical_BS = 80.0; // meter
+    double distance_typical_BS = 100.0; // meter
     double coverage_threshold = 1.0;
     
     double RIS_elements = 200.0;
