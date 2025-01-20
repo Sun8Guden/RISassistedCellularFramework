@@ -15,7 +15,7 @@ int main(){
     double noise_power = 1e-13; // Watt 
     double BS_density = 1e-5; //per m^2
     double distance_typical_BS = 100.0; // meter
-    double coverage_threshold = 1.0;
+    // double coverage_threshold = 1.0;
 
     // Count the timer !
     auto start{std::chrono::steady_clock::now()};

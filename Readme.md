@@ -31,3 +31,5 @@ Beyond the example folder, we've integrated simulations related to my PhD projec
 * Enable OpenMP for accelerated computations by compiling with the (-fopenmp) flag.
 * In numerical calculations, approximate infinite values with a suitably large finite number.
 * Practical warning to prevent integration misuse (avoid singularity) and malfunctions (avoid diverging functions)
+
+Please feel free to reach me out via guodong.sun1014@gmail.com. I am committed to maintaining and improving this framework
