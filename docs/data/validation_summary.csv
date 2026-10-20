@@ -1,0 +1,4 @@
+quantity,analytic,monte_carlo,monte_carlo_se,analytic_seconds
+ergodic_rate_without_ris,1.11445,1.11486,0.000363963,0.000222708
+ergodic_rate_with_ris,1.27742,1.27779,0.000338496,1.95921
+monte_carlo_seconds_per_sample,,,,4.35105e-07

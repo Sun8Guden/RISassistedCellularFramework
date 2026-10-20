@@ -2,11 +2,13 @@
 #include <cmath>
 #include <chrono>
 #include <complex>
-#include "../LaplaceTransform/PoissonPP.hpp"
-#include "../LaplaceTransform/Exponential.hpp"
-#include "../LaplaceTransform/LaplaceTransform.hpp"
-#include "../StochasticGeometry/CoverageProbability.hpp"
-#include "../Utils/pathloss.hpp"
+#include "../include/risgeo/laplace/PoissonPP.hpp"
+#include "../include/risgeo/laplace/Exponential.hpp"
+#include "../include/risgeo/laplace/LaplaceTransform.hpp"
+#include "../include/risgeo/geometry/CoverageProbability.hpp"
+#include "../include/risgeo/utils/pathloss.hpp"
+
+using namespace risgeo;
 
 int main(){
 

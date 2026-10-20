@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+title: "risgeo: a semi-analytical performance engine for RIS-assisted cellular networks"
+authors:
+  - family-names: Sun
+    given-names: Guodong
+    email: guodong.sun1014@gmail.com
+license: MIT
+preferred-citation:
+  type: article
+  title: "A Stochastic Geometry Framework for Performance Analysis of RIS-assisted OFDM Cellular Networks"
+  authors:
+    - family-names: Sun
+      given-names: Guodong
+    - family-names: Baccelli
+      given-names: Francois
+    - family-names: Feng
+      given-names: Ke
+    - family-names: Uzeda Garcia
+      given-names: Luis
+    - family-names: Paris
+      given-names: Stefano
+  journal: "IEEE Transactions on Wireless Communications"
+  year: 2025
+  doi: 10.1109/TWC.2025.3621323
+  identifiers:
+    - type: other
+      value: "arXiv:2310.06754"

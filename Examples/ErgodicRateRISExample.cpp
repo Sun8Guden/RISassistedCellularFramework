@@ -2,13 +2,15 @@
 #include <cmath>
 #include <chrono>
 #include <complex>
-#include "../LaplaceTransform/PoissonPP.hpp"
-#include "../LaplaceTransform/Exponential.hpp"
-#include "../LaplaceTransform/ChiSquare.hpp"
-#include "../LaplaceTransform/LaplaceTransform.hpp"
-#include "../StochasticGeometry/ErgodicRate.hpp"
-#include "../StochasticGeometry/CoverageProbability.hpp"
-#include "../Utils/pathloss.hpp"
+#include "../include/risgeo/laplace/PoissonPP.hpp"
+#include "../include/risgeo/laplace/Exponential.hpp"
+#include "../include/risgeo/laplace/ChiSquare.hpp"
+#include "../include/risgeo/laplace/LaplaceTransform.hpp"
+#include "../include/risgeo/geometry/ErgodicRate.hpp"
+#include "../include/risgeo/geometry/CoverageProbability.hpp"
+#include "../include/risgeo/utils/pathloss.hpp"
+
+using namespace risgeo;
 
 
 int main(){
@@ -54,7 +56,7 @@ int main(){
     auto end{std::chrono::steady_clock::now()};    
     const std::chrono::duration<double> elapsed_seconds{end - start};
 
-    std::cout << "The ergodic rate is " << ergodic_rate << "nat/Hz/s." << std::endl;
+    std::cout << "The ergodic rate is " << ergodic_rate << " nat/s/Hz." << std::endl;
     std::cout << "The program runs: " << elapsed_seconds.count() << " seconds." << std::endl;
 
 

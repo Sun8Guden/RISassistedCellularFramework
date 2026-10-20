@@ -2,14 +2,16 @@
 #include <cmath>
 #include <chrono>
 #include <complex>
-#include "../LaplaceTransform/PoissonPP.hpp"
-#include "../LaplaceTransform/Exponential.hpp"
-#include "../LaplaceTransform/ChiSquare.hpp"
-#include "../LaplaceTransform/LaplaceTransform.hpp"
-#include "../StochasticGeometry/CoverageProbability.hpp"
-#include "../Utils/pathloss.hpp"
-#include "../Integration/GenzMalik/Cube.hpp"
-#include "../Integration/GenzMalik/GM2D.hpp"
+#include "../include/risgeo/laplace/PoissonPP.hpp"
+#include "../include/risgeo/laplace/Exponential.hpp"
+#include "../include/risgeo/laplace/ChiSquare.hpp"
+#include "../include/risgeo/laplace/LaplaceTransform.hpp"
+#include "../include/risgeo/geometry/CoverageProbability.hpp"
+#include "../include/risgeo/utils/pathloss.hpp"
+#include "../include/risgeo/integration/genz_malik/Cube.hpp"
+#include "../include/risgeo/integration/genz_malik/GM2D.hpp"
+
+using namespace risgeo;
 
 int main(){
 
