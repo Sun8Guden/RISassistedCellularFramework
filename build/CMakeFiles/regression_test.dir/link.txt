@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/regression_test.dir/tests/regression_test.cpp.o -o tests/regression_test  /opt/homebrew/opt/libomp/lib/libomp.dylib

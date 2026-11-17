@@ -1,0 +1,128 @@
+Start testing: Oct 29 14:40 CET
+----------------------------------------------------------
+1/3 Testing: option_pricing
+1/3 Test: option_pricing
+Command: "/Users/guodongsun/Documents/GitHub/RISassistedCellularFramework/build/examples/OptionPricingExample"
+Directory: /Users/guodongsun/Documents/GitHub/RISassistedCellularFramework/build
+"option_pricing" start time: Oct 29 14:40 CET
+Output:
+----------------------------------------------------------
+Black-Scholes (S0 = 100, r = 3%, sigma = 20%, T = 1y): Gil-Pelaez vs. closed form
+  strike           call abs. error        digital abs. error
+    70.0    32.23517556    4.3e-14     0.93805844    2.2e-16
+    80.0    23.22399129    1.2e-13     0.85218288    1.6e-15
+    90.0    15.42922724    6.0e-14     0.69674456    2.0e-15
+    95.0    12.17970204    6.2e-14     0.60204039    2.3e-15
+   100.0     9.41340338    2.7e-14     0.50457229    1.2e-15
+   105.0     7.12806467    4.7e-14     0.41060249    2.7e-15
+   110.0     5.29339806    1.2e-14     0.32495683    1.3e-15
+   120.0     2.76655764    1.5e-14     0.18870478    1.6e-15
+   130.0     1.35767018    6.7e-16     0.10044746    1.1e-15
+Largest error 1.2e-13, 141 microseconds per price (call + digital)
+
+Heston benchmark of Fang & Oosterlee (2008): 5.7851554344 (published 5.785155434, difference 3.8e-10)
+
+Heston (kappa = 1.5, theta = 0.04, xi = 0.3, rho = -0.7, v0 = 0.04): Gil-Pelaez vs. Monte Carlo
+  strike    inversion  Monte Carlo               95% CI        z  impl. vol
+    70.0    32.593777    32.580595 [ 32.5658,  32.5954]    -1.75     24.85%
+    80.0    23.740044    23.727546 [ 23.7137,  23.7413]    -1.78     22.96%
+    90.0    15.773695    15.760803 [ 15.7467,  15.7749]    -1.79     21.15%
+    95.0    12.277911    12.266076 [ 12.2512,  12.2809]    -1.56     20.28%
+   100.0     9.193318     9.183097 [  9.1676,   9.1986]    -1.29     19.43%
+   105.0     6.575175     6.566142 [  6.5506,   6.5817]    -1.14     18.61%
+   110.0     4.458712     4.449565 [  4.4351,   4.4640]    -1.24     17.84%
+   120.0     1.704849     1.698235 [  1.6883,   1.7081]    -1.31     16.48%
+   130.0     0.505799     0.502278 [  0.4968,   0.5078]    -1.26     15.47%
+Inversion: 3.7 ms for 9 strikes. Monte Carlo: 1.1 s for 800000 paths x 1000 steps (400000 antithetic pairs).
+Largest |MC - inversion| / standard error: 1.79 (the Euler scheme also has a small discretisation bias)
+<end of output>
+Test time =   1.40 sec
+----------------------------------------------------------
+Test Passed.
+"option_pricing" end time: Oct 29 14:40 CET
+"option_pricing" time elapsed: 00:00:01
+----------------------------------------------------------
+
+2/3 Testing: regression
+2/3 Test: regression
+Command: "/Users/guodongsun/Documents/GitHub/RISassistedCellularFramework/build/tests/regression_test"
+Directory: /Users/guodongsun/Documents/GitHub/RISassistedCellularFramework/build
+"regression" start time: Oct 29 14:40 CET
+Output:
+----------------------------------------------------------
+[PASS] Cuhre 2D integral of exp(-x-y)                       0.3995764009 (expected 0.3995764009, rel. error 5.2e-14)
+[PASS] Genz-Malik 2D integral of exp(-x-y)                  0.3995764009 (expected 0.3995764009, rel. error 8.3e-15)
+[PASS] Exponential::eval_D1 vs finite difference            0.4321521175 (expected 0.4321521175, rel. error 6.8e-11)
+[PASS] ChiSquare::eval_central_D1 vs finite difference      0.3163857959 (expected 0.3163857959, rel. error 1.2e-11)
+[PASS] ChiSquare::eval_non_central_D1 vs finite difference  0.3454880025 (expected 0.3454880025, rel. error 8.4e-11)
+[PASS] sign of ChiSquare::eval_central_D1                   1 (expected 1, rel. error 0.0e+00)
+[PASS] PoissonPP2D_Reduced exponent (real s)                0.7786818234 (expected 0.7786818234, rel. error 0.0e+00)
+[PASS] PoissonPP2D_Reduced exponent (complex s)             0.7727736643 (expected 0.7727736643, rel. error 0.0e+00)
+[PASS] BinomialPP exponent                                  0.9999104397 (expected 0.9999104397, rel. error 0.0e+00)
+[PASS] BinomialPP normalisation                             1 (expected 1, rel. error 1.1e-15)
+[PASS] Black-Scholes call K=80 vs closed form               23.22399129 (expected 23.22399129, rel. error 5.4e-15)
+[PASS] Black-Scholes digital K=80 vs closed form            0.8521828783 (expected 0.8521828783, rel. error 1.8e-15)
+[PASS] Black-Scholes call K=100 vs closed form              9.413403384 (expected 9.413403384, rel. error 2.8e-15)
+[PASS] Black-Scholes digital K=100 vs closed form           0.5045722918 (expected 0.5045722918, rel. error 2.4e-15)
+[PASS] Black-Scholes call K=120 vs closed form              2.76655764 (expected 2.76655764, rel. error 5.5e-15)
+[PASS] Black-Scholes digital K=120 vs closed form           0.188704777 (expected 0.188704777, rel. error 8.7e-15)
+[PASS] Heston call vs Fang & Oosterlee (2008)               5.785155434 (expected 5.785155434, rel. error 6.5e-11)
+[PASS] Heston forward phi(-i) = S0 exp(rT)                  103.0454534 (expected 103.0454534, rel. error 5.5e-16)
+[PASS] Heston with xi -> 0 vs Black-Scholes                 5.29337937 (expected 5.293398058, rel. error 3.5e-06)
+[PASS] coverage probability                                 0.6606848321 (expected 0.660685, rel. error 2.5e-07)
+[PASS] coverage probability with RISs                       0.7771816929 (expected 0.777182, rel. error 4.0e-07)
+[PASS] ergodic rate                                         1.113738773 (expected 1.11374, rel. error 1.1e-06)
+[PASS] ergodic rate with RISs                               1.276622215 (expected 1.27658, rel. error 3.3e-05)
+
+OK: 0 failure(s)
+<end of output>
+Test time =   2.43 sec
+----------------------------------------------------------
+Test Passed.
+"regression" end time: Oct 29 14:40 CET
+"regression" time elapsed: 00:00:02
+----------------------------------------------------------
+
+3/3 Testing: monte_carlo_validation
+3/3 Test: monte_carlo_validation
+Command: "/Users/guodongsun/Documents/GitHub/RISassistedCellularFramework/build/validation/monte_carlo" "400000"
+Directory: /Users/guodongsun/Documents/GitHub/RISassistedCellularFramework/build
+"monte_carlo_validation" start time: Oct 29 14:40 CET
+Output:
+----------------------------------------------------------
+Monte Carlo: 400000 samples in 0.16 s (406 ns/sample)
+
+ SINR [dB] |   analytic         MC       z |   analytic         MC       z
+           |          coverage without RIS |             coverage with RIS
+     -10.0 |   0.953866   0.953333   -1.61 |   0.995107   0.994920   -1.69
+      -7.5 |   0.920592   0.920185   -0.95 |   0.984214   0.983970   -1.24
+      -5.0 |   0.866256   0.865495   -1.41 |   0.955996   0.955605   -1.21
+      -2.5 |   0.782033   0.781573   -0.71 |   0.893805   0.893572   -0.48
+       0.0 |   0.660925   0.660427   -0.66 |   0.777417   0.777265   -0.23
+       2.5 |   0.504093   0.504080   -0.02 |   0.600373   0.600140   -0.30
+       5.0 |   0.326820   0.327790    1.31 |   0.389982   0.390997    1.32
+       7.5 |   0.164017   0.164593    0.98 |   0.195719   0.196568    1.35
+      10.0 |   0.054214   0.054300    0.24 |   0.064693   0.064827    0.35
+      12.5 |   0.008954   0.009035    0.54 |   0.010684   0.010743    0.36
+      15.0 |   0.000458   0.000503    1.31 |   0.000547   0.000565    0.49
+      17.5 |   0.000003   0.000008    1.54 |   0.000004   0.000008    1.21
+      20.0 |   0.000000   0.000000   -0.00 |   0.000000   0.000000   -0.00
+
+Ergodic rate [nat/s/Hz]   analytic   MC (+- 1 s.e.)
+  without RIS              1.11445     1.11502 +- 0.00115
+  with RIS                 1.27742     1.27823 +- 0.00107
+
+Largest |MC - analytic| / standard error over all thresholds: 1.69
+Analytic time per point: coverage 1.34e-06 s, coverage with RIS 2.68e-01 s, rate 2.06e-04 s, rate with RIS 1.89 s
+<end of output>
+Test time =   5.75 sec
+----------------------------------------------------------
+Test Passed.
+"monte_carlo_validation" end time: Oct 29 14:40 CET
+"monte_carlo_validation" time elapsed: 00:00:05
+----------------------------------------------------------
+
+End testing: Oct 29 14:40 CET
+
+validation =   7.15 sec*proc
+
